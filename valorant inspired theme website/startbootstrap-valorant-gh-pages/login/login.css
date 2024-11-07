@@ -1,0 +1,203 @@
+@import url(https://db.onlinewebfonts.com/c/b621d1ffb46493164fd62fb7a83ab0ff?family=Mark+W05+Medium);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'FF Mark W05', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the form at the top to allow scrolling */
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    padding: 20px;
+    padding-bottom: 100px; /* Space for the footer */
+}
+
+.background-image {
+    background-image: url("valorant_desktop_background_2x.jpg"); /* Path to the background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensure the background is fixed */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1; /* Ensure the login box is on top */
+    margin-top: 100px;
+    margin-bottom: 50px; /* Adjust bottom margin to avoid overlap with the footer */
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.social {
+    background-color: #ddd;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%; /* Adjust width to fit all buttons well */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Social button specific colors */
+.facebook {
+    background-color: #4267B2;
+}
+
+.google {
+    background-color: #DB4437;
+}
+
+.apple {
+    background-color: #000000;
+}
+
+.xbox {
+    background-color: #107C10;
+}
+
+.playstation {
+    background-color: #003087;
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e60023;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #b3001b;
+}
+
+/* Stay signed in styling */
+.stay-signed-in {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+    justify-content: flex-start;
+}
+
+.stay-signed-in input {
+    margin-right: 10px;
+    width: 20px; /* Adjust checkbox size */
+    height: 20px;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    color: #fff;
+    font-size: 14px;
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect behind the footer */
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+    font-size: 12px;
+    color: #fff;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-text {
+    margin-top: 10px;
+    font-size: 10px; /* Smaller text for the policy information */
+    color: #bbb;
+}
+
+footer .footer-text a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer .footer-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .login-box {
+        width: 90%; /* Make the login box responsive */
+    }
+
+    .social {
+        width: 45%; /* Adjust button width for small screens */
+    }
+}
